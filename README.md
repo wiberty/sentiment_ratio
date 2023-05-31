@@ -5,19 +5,19 @@ The indicator has been a very useful filter tool for signals within a trading sy
 
 Example call function:
 
-//Return sentiment if trigger level is activated
+	//Return sentiment if trigger level is activated
 
-int sentiment_indicator(double trigger_level){
+	int sentiment_indicator(double trigger_level){
 
-	double sentiment_ratio=iCustom(NULL,0,"Sentiment Ratio",0,0,0);
+		double sentiment_ratio=iCustom(NULL,0,"Sentiment Ratio",0,0,0);
 
-	if(sentiment_ratio>=trigger_level) return(OP_BUY);
+		if(sentiment_ratio>=trigger_level) return(OP_BUY);
   
-	else if(sentiment_ratio<=-trigger_level) return(OP_SELL);
+		else if(sentiment_ratio<=-trigger_level) return(OP_SELL);
   
-	return(-1);//Default: No indication
+		return(-1);//Default: No indication
 
-}
+	}
 
 Basis of calculation:
 
